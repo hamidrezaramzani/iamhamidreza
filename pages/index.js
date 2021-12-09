@@ -7,6 +7,8 @@ export default function Home() {
         <meta name="description" content="Personal Website - Hamidreza Ramzani" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      
     </>
   )
 }
