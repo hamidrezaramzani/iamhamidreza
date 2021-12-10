@@ -4,10 +4,10 @@ function Welcome() {
   return (
     <div className={welcome}>
       <img
-        src="/images/logo.png"
+        src="/images/alien.png"
         alt="hamidrezaramzani logo"
-        height="450"
-        width="450"
+        height="350"
+        // width="450"
       />
       <h1>
         HELLO , I AM<span> HAMIDREZA </span> RAMZANI

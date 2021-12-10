@@ -1,0 +1,57 @@
+.about_us {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5em 0;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title h1 {
+  display: block;
+  text-align: center;
+  color: #daa520;
+  font-family: Quicksand;
+  margin: 0;
+}
+
+.title p {
+  display: block;
+  text-align: center;
+  color: #888;
+  margin: 0;
+  font-family: Quicksand;
+  padding-top: 5px;
+}
+
+.about_me_items {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.about_me_item {
+  padding: 20px;
+  text-align: center;
+  margin:  0 20px;
+}
+
+.about_me_item h3 {
+  color: #daa520;
+  font-family: Quicksand;
+  margin: 0;
+}
+
+.about_me_item p {
+  color: #fff;
+  font-family: Quicksand;
+  padding: 0;
+  margin:5px 0;
+}
