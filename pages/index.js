@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import AboutUs from '../components/AboutUs'
 import Header from '../components/Header'
+import Skills from '../components/Skills'
 export default function Home() {
   return (
     <>
       <Head>
         <title>Hamidreza Ramzani</title>
-        <meta name="description" content="Personal Website - Hamidreza Ramzani" />        
+        <meta name="description" content="Personal Website - Hamidreza Ramzani" />     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
         <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png"/>
         <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png"/>
@@ -24,11 +26,12 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png"/>
         <meta name="theme-color" content="#ffffff"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
       </Head>
 
       <Header />
       <AboutUs />
+      <Skills />
     </>
   )
 }

@@ -10,7 +10,7 @@ function Welcome() {
         // width="450"
       />
       <h1>
-        HELLO , I AM<span> HAMIDREZA </span> RAMZANI
+        <span> HAMIDREZA </span> RAMZANI
       </h1>
       <p>React Developer</p>
     </div>
