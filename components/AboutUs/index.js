@@ -29,8 +29,8 @@ function AboutUs() {
   return (
     <div className={about_us} id="#about_us">
       <div className={title}>
-        <h1>About US</h1>
-        <p>Everything you need to know about me</p>
+        <p>#AboutUs</p>
+        <h1>Everything you need to know about me</h1>
       </div>
 
       <div className={about_me_items}>{renderItems()}</div>

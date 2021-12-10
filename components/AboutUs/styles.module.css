@@ -16,18 +16,20 @@
 .title h1 {
   display: block;
   text-align: center;
-  color: #daa520;
-  font-family: Quicksand;
-  margin: 0;
-}
-
-.title p {
-  display: block;
-  text-align: center;
-  color: #888;
+  color: #fff;
   margin: 0;
   font-family: Quicksand;
   padding-top: 5px;
+}
+
+.title p {
+
+
+  display: block;
+  text-align: center;
+  color: #daa520;
+  font-family: Quicksand;
+  margin: 0;
 }
 
 .about_me_items {
