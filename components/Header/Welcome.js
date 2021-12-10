@@ -12,7 +12,7 @@ function Welcome() {
       <h1>
         HELLO , I AM<span> HAMIDREZA </span> RAMZANI
       </h1>
-      <p>Frontend Developer</p>
+      <p>React Developer</p>
     </div>
   );
 }

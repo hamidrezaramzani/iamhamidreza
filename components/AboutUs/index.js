@@ -30,7 +30,7 @@ function AboutUs() {
     <div className={about_us} id="#about_us">
       <div className={title}>
         <p>#AboutUs</p>
-        <h1>Everything you need to know about me</h1>
+        <h1>My Name is Hamidreza Ramzani , I&apos;m React Developer based in Iran and this is a selection of my personal and professional work</h1>
       </div>
 
       <div className={about_me_items}>{renderItems()}</div>
