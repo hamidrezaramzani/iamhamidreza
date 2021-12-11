@@ -6,8 +6,7 @@ function Welcome() {
       <img
         src="/images/alien.png"
         alt="hamidrezaramzani logo"
-        height="350"
-        // width="450"
+        height="350"        
       />
       <h1>
         <span> HAMIDREZA </span> RAMZANI

@@ -50,3 +50,14 @@
     font-family: Quicksand;
     line-height: 35px;
 }
+
+
+@media only screen and (max-width: 600px){
+    .project_items{
+      flex-direction: column;
+    }
+
+    .project_item{
+        width: 100%;
+    }
+  }

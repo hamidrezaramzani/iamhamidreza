@@ -32,8 +32,8 @@ export default function Home() {
 
       <Header />
       <AboutUs />
-      <Skills />
       <Projects />
+      <Skills />
     </>
   )
 }

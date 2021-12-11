@@ -17,6 +17,7 @@
   bottom: 0;
   top: 0;
   user-select: none;
+  z-index: 1;
 }
 
 .welcome h1 {
@@ -45,64 +46,7 @@
   padding: 0;
 }
 
-.navbar {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
-}
 
-.navbar div {
-  padding: 10px 0;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo h2 {
-  font: 18px Quicksand;
-  color: #fff;
-  font-weight: 800;
-  padding-left: 5px;
-}
-
-.logo h2 span {
-  color: goldenrod;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-.nav ul li {
-  margin-right: 30px;
-}
-.nav ul li a {
-  color: #fff;
-  font: 16px Quicksand;
-  text-align: center;
-}
-
-.nav ul li a:hover {
-  color: goldenrod;
-}
-.social_medias {
-  padding: 0 10px;
-}
-.social_medias a {
-  cursor: pointer;
-}
-.social_medias svg {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 18px;
-}
 
 .scrool_down_link {
   position: absolute;

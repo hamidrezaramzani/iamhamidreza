@@ -1,59 +1,86 @@
-.skills{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.skills {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-
-.skills_box{
-    width: 50%;
-    text-align: center;
+.skills_box {
+  width: 50%;
+  text-align: center;
 }
 
-.skills_picture{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.skills_picture {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.skills_picture img{
-    margin-bottom: 30px;
+.skills_picture img {
+  margin-bottom: 30px;
 }
 
-.skill_item{
-    width: 33%;
-    font-family: Quicksand;
-    display: flex;
-    justify-content: flex-end;
+.skill_item {
+  width: 33%;
+  font-family: Quicksand;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 40px;
+}
+
+.skill_item > div {
+  width: 125px;
+}
+
+.skills_items {
+  width: 56%;
+  display: flex;
+  justify-content: center;
+  /* padding: 50px 0; */
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.skill_item h3 {
+  color: #fff;
+}
+
+.skills_box > p {
+  width: 70%;
+  display: block;
+  margin: 20px auto auto auto;
+  color: #888;
+  font: 15px Quicksand;
+  line-height: 34px;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills {
     flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
-    margin-top: 40px;
-}
+  }
 
-.skill_item > div{
-    width: 125px;
-}
+  .skills_box{
+      width: 100%;
+  }
 
-.skills_items{
-    width: 56%;
-    display: flex;
-    justify-content: center;
-    /* padding: 50px 0; */
-    flex-wrap: wrap;
-    margin: 0 auto  ;
-}
+  .skills_picture{
+      width: 100%;
+  }
 
-.skill_item h3{
-    color: #fff;
-}
+  .skills_picture img{
+      width: 100%;
+      height: 250px;
+      /* object-fit: cover; */
+  }
 
-.skills_box > p{
-    width: 70%;
-    display: block;
-    margin: 20px auto auto auto;
-    color: #888;
-    font:15px Quicksand;
-    line-height: 34px;
+  .skills_items{
+      flex-direction: column;
+  }
+
+  .skill_item{
+      width: 100%;
+  }
 }

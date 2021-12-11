@@ -33,3 +33,10 @@
   padding: 0;
   margin: 5px 0;
 }
+
+
+@media only screen and (max-width: 600px){
+  .about_me_items{
+    flex-direction: column;
+  }
+}

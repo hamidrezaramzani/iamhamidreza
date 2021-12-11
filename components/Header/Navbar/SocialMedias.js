@@ -1,21 +1,27 @@
 import Link from "next/link";
 import React from "react";
-import { FiTwitter , FiCodesandbox } from "react-icons/fi";
+import { FiTwitter, FiCodesandbox } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { social_medias } from "./styles.module.css";
 function SocialMedias() {
   return (
     <div className={social_medias}>
       <Link passHref href="#social">
-        <FiTwitter />
+        <a>
+          <FiTwitter />
+        </a>
       </Link>
 
       <Link passHref href="#social">
-        <FaGithub />
+        <a>
+          <FaGithub />
+        </a>
       </Link>
 
       <Link passHref href="#social">
-        <FiCodesandbox />
+        <a>
+          <FiCodesandbox />
+        </a>
       </Link>
     </div>
   );
