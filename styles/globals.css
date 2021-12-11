@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap');
 @font-face {
   font-family: rock;
-  src: url(../public/fonts/RockvilleSolid.ttf) format("truetype");
+  src: url(../public/fonts/RockvilleSolid.ttf) format("truetype") , 
+  url(../public/fonts/RockvilleSolid.eot) format("embedded-opentype");
 }
 html,
 body {
