@@ -1,0 +1,57 @@
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .nav ul li {
+    margin-right: 30px;
+  }
+  .nav ul li a {
+    color: #fff;
+    font: 16px Quicksand;
+    text-align: center;
+  }
+  
+  .nav ul li a:hover {
+    color: goldenrod;
+  }
+
+  .nav button{
+    background: transparent;
+    border:none;
+    font-size: 20px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .nav button{
+        display: block;
+    }  
+  
+  
+    .show{
+        display: block!important;
+    }
+    .nav ul{
+        display: none;
+        z-index: 2;
+    }
+  
+    .nav ul{
+        flex-direction: column;
+    }
+    .nav ul li {
+        padding: 0 10px;
+        width: 100%;
+  
+    }
+  }
+  
+  

@@ -1,0 +1,40 @@
+
+.scrool_down_link {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce .5s infinite alternate;
+  }
+  .scrool_down_link svg {
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  
