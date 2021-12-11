@@ -1,0 +1,44 @@
+.footer{
+    padding: 5em 0;
+}
+
+.social_medias{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+}
+
+.social_medias svg{
+    font-size:22px;
+    margin: 0 10px;
+}
+
+.navbar ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.navbar ul li{
+    margin: 0 10px;
+}
+.navbar  a{
+    color: #888;
+    font:15px Quicksand
+}
+
+.navbar  a:hover{
+    color: #ddd;
+}
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p{
+    font:13px Quicksand;
+    color: #888;
+}
