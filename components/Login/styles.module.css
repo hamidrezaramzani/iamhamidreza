@@ -25,7 +25,7 @@
 .login_form{
     width: 85%;
     height: auto;
-    background: rgba(17, 17, 17, .5);
+    background: rgba(17, 17, 17, .8);
     margin-bottom: 50px;
     position: absolute;
     bottom: 0px;
@@ -73,4 +73,12 @@
     .login{
         width: 80%;
     }
+}
+
+.error_message{
+    display: block;
+    text-align: center;
+    font:14px Quicksand;
+    color: red;
+    margin-bottom: 12px; 
 }
