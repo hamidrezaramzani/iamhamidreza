@@ -3,7 +3,7 @@ import { nav , show } from "./styles.module.css";
 import NavItem from "./NavItem";
 import { AiOutlineMenu } from "react-icons/ai";
 function Nav() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
 
   const handleClickToggleMenu = () => {
     setState(state => !state)
