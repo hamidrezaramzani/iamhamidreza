@@ -31,7 +31,7 @@
     resize: none;
 }
 
-.contact_us_form input::placeholder{
+.contact_us_form input::placeholder   , .contact_us_form textarea::placeholder{
     color: #fff;
 }
 
