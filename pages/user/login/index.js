@@ -15,7 +15,7 @@ export const getServerSideProps = withSession(async function ({ req }) {
   if (user) {
     return {
       redirect: {
-        destination: "/admin/dashboard",
+        destination: "/user/dashboard",
         permanent: false,
       },
     };

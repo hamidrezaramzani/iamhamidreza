@@ -1,0 +1,21 @@
+.sidebar{
+    height: 100vh;
+    width: 20%;
+    background:#111;   
+}
+
+.sidebar_item{
+    width: 100%;
+    padding: 10px 0;
+    height: auto;
+}
+
+.sidebar_item:hover{
+    background-color: #131313;
+}
+
+.sidebar_item h3{
+    color:goldenrod;
+    text-align: center;
+    font-family: Quicksand;
+}
