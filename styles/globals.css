@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
   background: #000;
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
 }
 
 ul {
