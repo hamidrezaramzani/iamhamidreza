@@ -1,10 +1,13 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { login, login_form, error_message } from "./styles.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 import * as yup from "yup";
-
-function index() {
+import Swal from "sweetalert2";
+import axios from "axios";
+function Login() {
+  const router = useRouter();
   const schema = yup.object().shape({
     username: yup.string().required("it can not be empty"),
     password: yup
@@ -20,8 +23,25 @@ function index() {
     resolver: yupResolver(schema),
   });
 
-  const handleSubmitForm = (values) => {
-    console.log(values);
+  const handleSubmitForm = async (values) => {    
+    try {
+      await axios.post("/api/user/login", values);
+      router.push("/user/dashboard");
+    } catch (error) {
+      if (error.response.status == 401) {
+        Swal.fire({
+          title: "Error",
+          text: "Username or password is invalid",
+          icon: "error",
+        });
+      } else {
+        Swal.fire({
+          title: "Error",
+          text: "We have an error in the server",
+          icon: "error",
+        });
+      }
+    }
   };
   return (
     <div className={login}>
@@ -54,4 +74,4 @@ function index() {
   );
 }
 
-export default index;
+export default Login;
