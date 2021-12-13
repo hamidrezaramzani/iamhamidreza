@@ -9,3 +9,16 @@ spec:
     project_type: nodejs
   domains:
     - name: iamhamidreza.ir
+  env:
+    - name: DB_HOST
+      value: hamidreza-sql
+    - name: DB_USER
+      value: root
+    - name: DB_PASSWORD
+      value: hamidreza000
+    - name: DB_PORT
+      value: 3306
+    - name: SESSION_PASSWORD
+      value: 847be86d26cee38606024a2d71b04d59
+    - name: DB_NAME
+      value: hamidreza
