@@ -20,3 +20,38 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.input {
+  width: 100%;
+  height: 40px;
+  background: #222;
+  border: none;
+  padding: 5px;
+  color: #888;
+  font: 16px Quicksand;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.error-label {
+  display: block;
+  text-align: center;
+  font: 15px Quicksand;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  color: goldenrod;
+  font: 17px Quicksand;
+  background: transparent;
+  border: 1px solid goldenrod;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: goldenrod;
+  color: #111;
+}

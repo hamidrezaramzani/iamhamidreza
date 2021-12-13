@@ -63,7 +63,7 @@ function NewBlog() {
         placeholder="Title"
         className={input}
       />
-      <span className={error_label}>{errors.title?.message}</span>
+      <span className={"error-label"}>{errors.title?.message}</span>
       <input
         type="text"
         name="description"
@@ -71,7 +71,7 @@ function NewBlog() {
         className={input}
         {...register("description")}
       />
-      <span className={error_label}>{errors.description?.message}</span>
+      <span className={"error-label"}>{errors.description?.message}</span>
       <input
         type="text"
         name="image"
@@ -79,7 +79,7 @@ function NewBlog() {
         className={input}
         {...register("image")}
       />
-      <span className={error_label}>{errors.image?.message}</span>
+      <span className={"error-label"}>{errors.image?.message}</span>
 
       <Editor
         editorState={state.editorState}
