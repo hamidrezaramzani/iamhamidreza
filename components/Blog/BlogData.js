@@ -1,13 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {
-  blog_data,
-  loading,
-  active,
-  deactive,
-  empty_record,
-} from "./styles.module.css";
-import { SpinnerDotted } from "spinners-react";
+import { blog_data, active, deactive, empty_record } from "./styles.module.css";
+import Loading from "../Loading";
 import moment from "moment";
 function BlogData() {
   const [state, setState] = useState(null);
@@ -24,12 +18,7 @@ function BlogData() {
   }, []);
 
   const renderData = () => {
-    if (state == null)
-      return (
-        <div className={loading}>
-          <SpinnerDotted color="#daa520" />
-        </div>
-      );
+    if (state == null) return <Loading />;
     if (state.length) {
       console.log(state);
       return (

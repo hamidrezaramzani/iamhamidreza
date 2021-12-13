@@ -1,3 +1,4 @@
+import moment from "moment";
 import Link from "next/link";
 import React from "react";
 import {
@@ -5,7 +6,7 @@ import {
   blog_item_content,
   blog_item_reverse,
 } from "./styles.module.css";
-function BlogItem({ title, description, reverse }) {
+function BlogItem({ description, reverse, content, date }) {
   return (
     <div className={blog_item}>
       <Link href="/blog/id">
@@ -22,18 +23,9 @@ function BlogItem({ title, description, reverse }) {
               />
             </div>
             <div>
-                <span>5 December - 20:14</span>
-              <h3>Blog Title</h3>
-              <p>
-                Lorem nisi consequat incididunt in nulla veniam reprehenderit
-                occaecat id velit in duis in est. Aute dolor deserunt id
-                exercitation voluptate eiusmod anim proident eu incididunt
-                reprehenderit. Cupidatat cillum et proident deserunt. Est fugiat
-                labore deserunt sint. Veniam sint aliqua aliqua enim nisi ut
-                irure. Duis irure proident ipsum consequat mollit sint nostrud.
-                Dolor amet fugiat cillum amet commodo velit aute ullamco eu
-                irure.u
-              </p>              
+              <span>{moment.unix(date).format("MM MMMM YYYY -  h:m")}</span>
+              <h3>{content}</h3>
+              <p>{description}</p>
             </div>
           </div>
         </a>

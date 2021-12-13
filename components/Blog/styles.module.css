@@ -86,13 +86,6 @@
 .blog_data {
   width: 100%;
 }
-.loading {
-  width: 100%;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .blog_data table {
   color: #fff;
