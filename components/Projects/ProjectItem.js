@@ -1,15 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import { project_item } from "./styles.module.css";
-function ProjectItem({ title, description }) {
+function ProjectItem({ title, description, image, link }) {
   return (
     <div className={project_item}>
-      <Link href="/projects/id">
+      <Link href={link}>
         <a>
-          <img
-            src="https://picsum.photos/400/200?grayscale"
-            alt="testing image"
-          />
+          <img src={image} alt="testing image" />
           <h3>{title}</h3>
           <p>{description}</p>
         </a>

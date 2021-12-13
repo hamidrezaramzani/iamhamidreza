@@ -6,10 +6,10 @@ import {
   blog_item_content,
   blog_item_reverse,
 } from "./styles.module.css";
-function BlogItem({ description, reverse, content, date }) {
+function BlogItem({ id, description, reverse, content, date }) {
   return (
     <div className={blog_item}>
-      <Link href="/blog/id">
+      <Link href={`/blog/${id}`}>
         <a>
           <div
             className={`${blog_item_content} ${

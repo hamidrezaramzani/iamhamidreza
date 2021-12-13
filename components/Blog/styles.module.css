@@ -127,3 +127,63 @@
   color: red;
   font:16px Quicksand
 }
+
+.header{
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  background: #131313;
+  display: flex;
+}
+
+
+.blog_image{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.blog_info{
+  width: 70%;
+}
+
+.blog_info h1{
+  color: goldenrod;
+  font:40px Quicksand
+}
+
+.blog_info p{
+  color: #888;
+  font:18px Quicksand
+}
+
+.blog_content{
+  width: 100%;
+  padding: 50px;
+  color: #fff;
+}
+
+.blog_footer{
+  width: 100%;
+  height: auto;
+  background: #151515;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.blog_like_button{
+  cursor: pointer;
+  border-radius: 5px;
+  border:1px solid #aa1135;
+  color: #aa1135;
+  background:transparent;
+  font:15px Quicksand;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
