@@ -1,8 +1,7 @@
 import React from "react";
 import Dashboard from "../../components/Dashboard";
 import NewProjectForm from "../../components/Projects/NewProjectForm";
-
-
+import withSession from '../../lib/session'
 function newProject() {
   return (
     <Dashboard title="New Project">

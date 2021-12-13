@@ -1,6 +1,7 @@
 import React from "react";
 import BlogData from "../../components/Blog/BlogData";
 import Dashboard from "../../components/Dashboard";
+import withSession from '../../lib/session'
 
 
 

@@ -5,7 +5,7 @@ export default withSession(async (req, res) => {
   const data = req.body;
   data.date = moment().unix();
   db.query(
-    "INSERT INTO `projects`(`title`,`description`, `image`,  `date`) VALUES (?,?,?,?)",
+    "INSERT INTO `projects`(`title`,`description`, `image`, `link`,`date`) VALUES (?,?,?,?,?)",
     Object.values(data),
     (err) => {
       if (err) res.status(500).json(err);

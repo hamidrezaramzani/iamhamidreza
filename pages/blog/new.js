@@ -1,7 +1,7 @@
 import React from "react";
 import Dashboard from "../../components/Dashboard";
-
 import NewBlogForm from "../../components/Blog/NewBlog";
+import withSession from '../../lib/session'
 
 function newBlog() {
   return (

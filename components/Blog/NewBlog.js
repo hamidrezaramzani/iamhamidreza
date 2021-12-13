@@ -61,14 +61,14 @@ function NewBlog() {
         {...register("title")}
         name="title"
         placeholder="Title"
-        className={input}
+        className={"input"}
       />
       <span className={"error-label"}>{errors.title?.message}</span>
       <input
         type="text"
         name="description"
         placeholder="Description"
-        className={input}
+        className={"input"}
         {...register("description")}
       />
       <span className={"error-label"}>{errors.description?.message}</span>
@@ -76,7 +76,7 @@ function NewBlog() {
         type="text"
         name="image"
         placeholder="Image Url"
-        className={input}
+        className={"input"}
         {...register("image")}
       />
       <span className={"error-label"}>{errors.image?.message}</span>
@@ -88,7 +88,7 @@ function NewBlog() {
         editorStyle={{ height: "500px", paddingTop: "15px", color: "#fff" }}
       />
 
-      <button className={button}>New</button>
+      <button className={"button"}>New</button>
     </form>
   );
 }
