@@ -11,4 +11,20 @@ function newProject() {
   );
 }
 
+export const getServerSideProps = withSession(async function ({ req }) {
+  const user = req.session.get("user");  
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/user/login",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+});
+
 export default newProject;

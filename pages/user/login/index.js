@@ -11,7 +11,6 @@ function index({ user }) {
 
 export const getServerSideProps = withSession(async function ({ req }) {
   const user = req.session.get("user");
-  console.log(user);
   if (user) {
     return {
       redirect: {

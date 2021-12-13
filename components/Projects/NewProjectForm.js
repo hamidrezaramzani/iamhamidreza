@@ -11,6 +11,7 @@ function NewProjectForm() {
     title: yup.string().required("it can not be empty"),
     description: yup.string().required("it can not be empty"),
     image: yup.string().required("it can not be empty"),
+    link: yup.string().required("it can not be empty"),
   });
 
   const router = useRouter();
@@ -63,6 +64,16 @@ function NewProjectForm() {
           {...register("image")}
         />
         <span className="error-label">{errors.image?.message}</span>
+
+
+        <input
+          type="text"
+          name="link"
+          placeholder="Project Link"
+          className={"input"}
+          {...register("link")}
+        />
+        <span className="error-label">{errors.link?.message}</span>
         <button className="button">New</button>
       </form>
     </div>
