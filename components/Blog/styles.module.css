@@ -87,20 +87,6 @@
   width: 100%;
 }
 
-.blog_data table {
-  color: #fff;
-}
-
-.blog_data td {
-  padding: 10px;
-  font-family: Quicksand;
-}
-
-.blog_data thead tr {
-  background: goldenrod;
-  color: #111;
-}
-
 .active {
   background-color: greenyellow;
   color: #111;

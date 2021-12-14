@@ -24,7 +24,7 @@ export const useLoadData = (url) => {
 };
 
 export const useRenderData = (Component, loading, data) => {
-  const fetchData = () => {
+  const renderData = () => {
     if (loading) return <Loading />;
 
     if (data.length) {
@@ -32,6 +32,6 @@ export const useRenderData = (Component, loading, data) => {
     }
   };
 
-  return fetchData;
+  return renderData;
 };
 

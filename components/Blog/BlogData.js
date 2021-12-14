@@ -19,8 +19,7 @@ function BlogData() {
 
   const renderData = () => {
     if (state == null) return <Loading />;
-    if (state.length) {
-      console.log(state);
+    if (state.length) {      
       return (
         <table>
           <thead>
