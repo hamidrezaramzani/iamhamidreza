@@ -55,3 +55,7 @@ a {
   background: goldenrod;
   color: #111;
 }
+
+.swal2-popup{
+  font-family: Quicksand!important;
+}
