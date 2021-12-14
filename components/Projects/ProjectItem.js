@@ -6,7 +6,7 @@ function ProjectItem({ title, description, image, link }) {
     <div className={project_item}>
       <Link href={link}>
         <a>
-          <img src={image} alt="testing image" />
+          <img src={image} alt={title} />
           <h3>{title}</h3>
           <p>{description}</p>
         </a>

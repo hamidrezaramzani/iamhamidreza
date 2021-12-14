@@ -17,10 +17,10 @@ function SocialMedias() {
         <FaGithub />
       </Item>
 
-      <Item link={"https://t.me/hamidrezaramzani80"}>
+      <Item link={"https://t.me/manticore_channel"}>
         <FaTelegram />
       </Item>
-      <Item link={"https://instagram.com/hamidrezaramzani"}>
+      <Item link={"https://instagram.com/hamidrezaramzani_"}>
         <AiOutlineInstagram />
       </Item>
      

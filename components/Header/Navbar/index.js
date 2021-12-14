@@ -6,7 +6,7 @@ import { navbar, fixed } from "./styles.module.css";
 function Navbar() {
   const [state, setState] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 600) setState(true);
+    if (window.scrollY > 50) setState(true);
     else setState(false);
   };
   useEffect(() => {
