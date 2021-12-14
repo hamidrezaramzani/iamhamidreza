@@ -4,7 +4,9 @@ import BlogContent from "../../components/Blog/BlogContent";
 import BlogFooter from "../../components/Blog/BlogFooter";
 import axios from "axios";
 import Loading from "../../components/Loading";
-function SingleBlogItem({ id }) {
+import withSession from "../../lib/session";
+import Head from "next/head";
+function SingleBlogItem({ id, liked }) {
   const [state, setState] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -20,25 +22,31 @@ function SingleBlogItem({ id }) {
   }, []);
   return state != null ? (
     <>
+      <Head>
+        <title>{state.content}</title>
+        <meta name="description" content={state.description} />
+      </Head>
       <BlogHeader
         title={state.content}
         description={state.description}
         image={state.image}
       />
       <BlogContent content={state.title} />
-      <BlogFooter likes={state.likes} />
+      <BlogFooter id={state.id} likes={state.likes} liked={liked} />
     </>
   ) : (
     <Loading />
   );
 }
 
-export async function getServerSideProps(ctx) {
-  const { id } = ctx.query;
+export const getServerSideProps = withSession(({ query, req }) => {
+  const { id } = query;
+  const liked = req.session.get(`blog-like-${id}`) ? true : false;  
   return {
     props: {
       id,
+      liked,
     },
   };
-}
+});
 export default SingleBlogItem;

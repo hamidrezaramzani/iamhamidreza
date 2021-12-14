@@ -1,5 +1,5 @@
 const db = require("../../../lib/database");
-export default function handle(req, res) {
+export default function handler(req, res) {
   const { id } = req.query;
   db.query(
     "SELECT * FROM blogs WHERE id=? AND status=1",

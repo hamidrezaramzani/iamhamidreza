@@ -9,7 +9,7 @@ function index({ user }) {
   );
 }
 
-export const getServerSideProps = withSession(async function ({ req }) {
+export const getServerSideProps = withSession(function ({ req }) {
   const user = req.session.get("user");
   if (user) {
     return {

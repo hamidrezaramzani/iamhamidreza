@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 import Loading from "./Loading";
 export const useLoadData = (url) => {
   const [state, setState] = useState([]);
@@ -33,3 +34,4 @@ export const useRenderData = (Component, loading, data) => {
 
   return fetchData;
 };
+

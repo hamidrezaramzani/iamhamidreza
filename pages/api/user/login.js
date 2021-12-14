@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 import withSession from "../../../lib/session";
 export default withSession(async (req, res) => {
   const { username, password } = req.body;  
-console.log("Test");
   db.query(
     "SELECT * FROM admin WHERE username=?",
     [username],
