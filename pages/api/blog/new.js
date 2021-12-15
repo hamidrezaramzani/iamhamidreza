@@ -6,7 +6,7 @@ export default withSession(async (req, res) => {
   const data = req.body;
   data.time = moment().unix();
   db.query(
-    "INSERT INTO `blogs`(`content`,`description`, `image`,  `title`,  `date`) VALUES (?,?,?,?,?)",
+    "INSERT INTO `blogs`(`title`,`description`, `image`,  `content`,  `date`) VALUES (?,?,?,?,?)",
     Object.values(data),
     (err, result) => {
       if (err) res.status(500).json(err);
