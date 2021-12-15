@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import moment from "moment";
-import { active, deactive } from "./styles.module.css";
 import parser from "html-react-parser";
 import Modal from "react-modal";
 import Swal from "sweetalert2";
