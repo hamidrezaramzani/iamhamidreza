@@ -6,7 +6,7 @@ import Modal from "react-modal";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { BlogsContext } from "../../context/providers/BlogsProvider";
-import { removeItem } from "../../context/actions/blogActions";
+import { changeStatus, removeItem } from "../../context/actions/blogActions";
 function BlogManageItem({
   id,
   title,
@@ -60,6 +60,24 @@ function BlogManageItem({
     }
   };
 
+  const renderByStatus = (texts) => {
+    return texts[status];
+  };
+
+  const handleClickChangeStatus = async () => {
+    try {
+      const { data } = await axios.get(
+        `/api/blog/change-status/${id}/${status}`
+      );
+      dispatch(changeStatus(id, data.status));
+    } catch (error) {
+      Swal.fire({
+        title: "Error",
+        text: "we have an error on server",
+        icon: "error",
+      });
+    }
+  };
   return (
     <>
       <Modal
@@ -83,10 +101,20 @@ function BlogManageItem({
         <td>{title}</td>
         <td>{description}</td>
         <td>
-          <button className="btn btn-warning" onClick={handleClickShowContentModal}>show content</button>
+          <button
+            className="btn btn-warning"
+            onClick={handleClickShowContentModal}
+          >
+            show content
+          </button>
         </td>
         <td>
-          <button className="btn btn-warning" onClick={handleClickShowImageModal}>show image</button>
+          <button
+            className="btn btn-warning"
+            onClick={handleClickShowImageModal}
+          >
+            show image
+          </button>
         </td>
         <td>{moment.unix(date).format("MM/DD/YYYY h:m")}</td>
         <td>
@@ -94,8 +122,14 @@ function BlogManageItem({
             Delete
           </button>
           &nbsp;&nbsp;
-          <button className={`${status == 1 ? "btn btn-success" :"btn btn-danger"}`}>
-            {status == 1 ? "Active" : "InActive"}
+          <button
+            onClick={handleClickChangeStatus}
+            className={`${renderByStatus([
+              "btn btn-danger",
+              "btn btn-success",
+            ])}`}
+          >
+            {renderByStatus(["InActive", "Active"])}
           </button>
         </td>
       </tr>
