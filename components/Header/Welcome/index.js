@@ -10,7 +10,7 @@ function Welcome() {
           <span>            
             Hamidreza 
           </span>
-           Ramzani
+           Ramezani
         </h1>
       </Typist>
       <p>React Developer</p>

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Dashboard from "../../components/Dashboard";
 import withSession from "../../lib/session";
 import { useLoadData, useRenderData } from "../../components/hooks";
 import BlogManageItem from "../../components/Blog/BlogManageItem";
+import { loadData } from "../../context/actions/blogActions";
+import { BlogsContext } from "../../context/providers/BlogsProvider";
+
 function Manage() {
-  const { state, loading } = useLoadData("/api/blog/all");
+  const { loading } = useLoadData("/api/blog/all", (data) => {    
+    dispatch(loadData(data));
+  });
+  const { state, dispatch } = useContext(BlogsContext);
+
   const renderData = useRenderData(BlogManageItem, loading, state);
   return (
     <Dashboard title="Manage Blog">

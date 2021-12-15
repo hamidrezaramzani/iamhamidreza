@@ -1,6 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import BlogsProvider from "../context/providers/BlogsProvider";
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <BlogsProvider>
+      <Component {...pageProps} />
+    </BlogsProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

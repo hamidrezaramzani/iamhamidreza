@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import moment from "moment";
 import { active, deactive } from "./styles.module.css";
 import parser from "html-react-parser";
 import Modal from "react-modal";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { BlogsContext } from "../../context/providers/BlogsProvider";
+import { removeItem } from "../../context/actions/blogActions";
 function BlogManageItem({
   id,
   title,
@@ -12,8 +16,9 @@ function BlogManageItem({
   date,
   image,
 }) {
-  const [state, setState] = useState(false);
-  const [imageModal,setImageModal] = useState(false);
+  const { dispatch } = useContext(BlogsContext);
+  const [showContentModal, setShowContentModal] = useState(false);
+  const [showImageModal, setShowImageModal] = useState(false);
   const customStyles = {
     content: {
       top: "50%",
@@ -26,30 +31,51 @@ function BlogManageItem({
   };
 
   const handleClickShowContentModal = () => {
-    setState(true);
+    setShowContentModal(true);
   };
 
   const handleClickCloseContentModal = () => {
-    setState(false);
+    setShowContentModal(false);
   };
 
-  
   const handleClickShowImageModal = () => {
-    setImageModal(true);
+    setShowImageModal(true);
   };
 
   const handleClickCloseImageModal = () => {
-    setImageModal(false);
+    setShowImageModal(false);
+  };
+
+  const handleClickDeleteBlog = async () => {
+    try {
+      await axios.get(`/api/blog/delete/${id}`);
+      dispatch(removeItem(id));
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        title: "Error",
+        text: "we have an error on server",
+        icon: "error",
+      });
+    }
   };
 
   return (
     <>
-      <Modal isOpen={state} style={customStyles} contentLabel="Show Content">
+      <Modal
+        isOpen={showContentModal}
+        style={customStyles}
+        contentLabel="Show Content"
+      >
         {parser(content)}
         <button onClick={handleClickCloseContentModal}>Close</button>
       </Modal>
 
-      <Modal isOpen={imageModal} style={customStyles} contentLabel="Show Image">
+      <Modal
+        isOpen={showImageModal}
+        style={customStyles}
+        contentLabel="Show Image"
+      >
         <img src={image} alt={title} />
         <button onClick={handleClickCloseImageModal}>Close</button>
       </Modal>
@@ -64,7 +90,9 @@ function BlogManageItem({
         </td>
         <td>{moment.unix(date).format("MM/DD/YYYY h:m")}</td>
         <td>
-          <button>Delete</button>
+          <button className={deactive} onClick={handleClickDeleteBlog}>
+            Delete
+          </button>
           &nbsp;
           <button className={`${status == 1 ? active : deactive}`}>
             {status == 1 ? "Active" : "DeActive"}

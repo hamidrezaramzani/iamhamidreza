@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import Loading from "./Loading";
-export const useLoadData = (url) => {
+export const useLoadData = (url, callback = null) => {
   const [state, setState] = useState([]);
   const [loading, setLoading] = useState([]);
   useEffect(() => {
@@ -11,6 +11,7 @@ export const useLoadData = (url) => {
         const { data } = await axios.get(url);
         setState(data);
         setLoading(false);
+        if (callback) callback(data);
       } catch (error) {
         console.log(error);
         setLoading(false);
@@ -34,4 +35,3 @@ export const useRenderData = (Component, loading, data) => {
 
   return renderData;
 };
-
