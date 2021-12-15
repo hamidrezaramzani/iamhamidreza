@@ -83,19 +83,19 @@ function BlogManageItem({
         <td>{title}</td>
         <td>{description}</td>
         <td>
-          <button onClick={handleClickShowContentModal}>show content</button>
+          <button className="btn btn-warning" onClick={handleClickShowContentModal}>show content</button>
         </td>
         <td>
-          <button onClick={handleClickShowImageModal}>show image</button>
+          <button className="btn btn-warning" onClick={handleClickShowImageModal}>show image</button>
         </td>
         <td>{moment.unix(date).format("MM/DD/YYYY h:m")}</td>
         <td>
-          <button className={deactive} onClick={handleClickDeleteBlog}>
+          <button className={"btn btn-danger"} onClick={handleClickDeleteBlog}>
             Delete
           </button>
-          &nbsp;
-          <button className={`${status == 1 ? active : deactive}`}>
-            {status == 1 ? "Active" : "DeActive"}
+          &nbsp;&nbsp;
+          <button className={`${status == 1 ? "btn btn-success" :"btn btn-danger"}`}>
+            {status == 1 ? "Active" : "InActive"}
           </button>
         </td>
       </tr>

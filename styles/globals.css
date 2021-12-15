@@ -76,3 +76,41 @@ table thead tr {
   background: goldenrod;
   color: #111;
 }
+
+.btn{
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 5px 6px;
+  font-family: Quicksand;
+}
+.btn-danger {
+  color: #eb2031;
+  border: 1px solid #eb2031;
+}
+
+.btn-danger:hover {
+  background-color: #eb2031;
+  color: #fff;
+}
+
+.btn-success {
+  color: #38eb20;
+  border: 1px solid #38eb20;
+}
+
+.btn-success:hover {
+  background-color: #38eb20;
+  color: #fff;
+}
+
+
+.btn-warning {
+  color: goldenrod;
+  border: 1px solid goldenrod;
+}
+
+.btn-warning:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
