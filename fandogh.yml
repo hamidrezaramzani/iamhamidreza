@@ -5,7 +5,7 @@ spec:
   port: 3000
   source:
     context: .
-    node_version: '14'
+    node_version: "14"
     project_type: nodejs
   domains:
     - name: iamhamidreza.ir
@@ -22,3 +22,7 @@ spec:
       value: 847be86d26cee38606024a2d71b04d59
     - name: DB_NAME
       value: hamidreza
+    - name: EMAIL_USERNAME
+      value: hamidrezaramzani7@gmail.com
+    - name: EMAIL_PASSWORD
+      value: hamidreza000
