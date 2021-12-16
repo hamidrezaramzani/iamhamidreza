@@ -1,0 +1,33 @@
+.animated_items {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+
+.animated_item {
+  padding: 20px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.animated_item h3 {
+  color: #daa520;
+  font-family: Quicksand;
+  margin: 0;
+}
+
+.animated_item p {
+  color: #fff;
+  font-family: Quicksand;
+  padding: 0;
+  margin: 5px 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .animated_items {
+    flex-direction: column;
+  }
+}
