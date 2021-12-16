@@ -5,7 +5,11 @@
     justify-content: center;
     flex-direction: column;
 }
-
+.contact_us p {
+    text-align: center;
+    font:15px Quicksand;
+    color: #888;
+}
 .contact_us_form{
     width: 30%;
     display: block;
@@ -28,8 +32,10 @@
 
 .contact_us_form textarea{
     height: 120px;
+    line-height: 100px;
     resize: none;
 }
+
 
 .contact_us_form input::placeholder   , .contact_us_form textarea::placeholder{
     color: #fff;
@@ -64,3 +70,12 @@
     font-family: Quicksand;
     padding: 30px;
 }
+
+
+.contact_us_items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+

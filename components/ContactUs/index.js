@@ -1,11 +1,17 @@
 import React from "react";
-import { contact_us, contact_us_form } from "./styles.module.css";
+import {
+  contact_us,
+  contact_us_form,
+  contact_us_items,
+} from "./styles.module.css";
 import Title from "../Title";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 import Swal from "sweetalert2";
 import axios from "axios";
+import AnimatedIcon from "../AnimatedIcon";
+import { CONTACT_US } from "../../constants";
 function ContactUs() {
   const schema = yup.object().shape({
     email: yup
@@ -41,9 +47,18 @@ function ContactUs() {
       });
     }
   };
+
+  const renderItems = () => {
+    return CONTACT_US.map((item, index) => (
+      <AnimatedIcon {...item} key={index} />
+    ));
+  };
+
   return (
     <div className={contact_us}>
       <Title titleText={"#ContactUs"} description={"Get in touch with me"} />
+      <p>You can get in touch with me with these ways</p>
+      <div className={contact_us_items}>{renderItems()}</div>
       <div className={contact_us_form}>
         <form onSubmit={handleSubmit(handleSubmitForm)}>
           <input

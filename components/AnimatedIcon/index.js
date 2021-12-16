@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { about_me_item } from "./styles.module.css";
-function AboutItem({ title, description, staticImage, animate }) {
+import { animated_icon } from "./styles.module.css";
+function AnimatedIcon({ title, description, staticImage, animate }) {
   const [state, setState] = useState(staticImage);
   const handleMouseEnter = () => {
     setState(animate);
@@ -11,7 +11,7 @@ function AboutItem({ title, description, staticImage, animate }) {
   };
   return (
     <div
-      className={about_me_item}
+      className={animated_icon}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -22,4 +22,4 @@ function AboutItem({ title, description, staticImage, animate }) {
   );
 }
 
-export default AboutItem;
+export default AnimatedIcon;

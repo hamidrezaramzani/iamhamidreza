@@ -1,0 +1,20 @@
+
+.animated_icon {
+    padding: 20px;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .animated_icon h3 {
+    color: #daa520;
+    font-family: Quicksand;
+    margin: 0;
+  }
+  
+  .animated_icon p {
+    color: #fff;
+    font-family: Quicksand;
+    padding: 0;
+    margin: 5px 0;
+  }
+  

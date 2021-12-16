@@ -15,25 +15,6 @@
   padding: 50px 0;
 }
 
-.about_me_item {
-  padding: 20px;
-  text-align: center;
-  margin: 0 20px;
-}
-
-.about_me_item h3 {
-  color: #daa520;
-  font-family: Quicksand;
-  margin: 0;
-}
-
-.about_me_item p {
-  color: #fff;
-  font-family: Quicksand;
-  padding: 0;
-  margin: 5px 0;
-}
-
 
 @media only screen and (max-width: 600px){
   .about_me_items{

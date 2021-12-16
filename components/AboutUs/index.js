@@ -1,11 +1,11 @@
 import React from "react";
-import AboutItem from "./AboutItem";
+import AnimatedItem from "../AnimatedIcon";
 import { about_us, about_me_items } from "./styles.module.css";
 import Title from "../Title/index";
 import { ABOUT_ME } from "../../constants";
 function AboutUs() {
   const renderItems = () => {
-    return ABOUT_ME.map((item, index) => <AboutItem key={index} {...item} />);
+    return ABOUT_ME.map((item, index) => <AnimatedItem key={index} {...item} />);
   };
   return (
     <div className={about_us} id="#about_us">
