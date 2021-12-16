@@ -7,7 +7,7 @@ import { loadData } from "../../context/actions/blogActions";
 import { BlogsContext } from "../../context/providers/BlogsProvider";
 
 function Manage() {
-  const { loading } = useLoadData("/api/blog/all", (data) => {    
+  const { loading } = useLoadData("/api/blog/all", (data) => {
     dispatch(loadData(data));
   });
   const { state, dispatch } = useContext(BlogsContext);
@@ -15,19 +15,21 @@ function Manage() {
   const renderData = useRenderData(BlogManageItem, loading, state);
   return (
     <Dashboard title="Manage Blog">
-      <table>
-        <thead>
-          <tr>
-            <td>title</td>
-            <td>description</td>
-            <td>content</td>
-            <td>image</td>
-            <td>date</td>
-            <td>manage</td>
-          </tr>
-        </thead>
-        <tbody>{renderData()}</tbody>
-      </table>
+      <div className="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <td>title</td>
+              <td>description</td>
+              <td>content</td>
+              <td>image</td>
+              <td>date</td>
+              <td>manage</td>
+            </tr>
+          </thead>
+          <tbody>{renderData()}</tbody>
+        </table>
+      </div>
     </Dashboard>
   );
 }

@@ -15,19 +15,21 @@ function Manage() {
   const renderData = useRenderData(ProjectItem, loading, state);
   return (
     <Dashboard title="Manage Project">
-      <table>
-        <thead>
-          <tr>
-            <td>title</td>
-            <td>description</td>
-            <td>image</td>
-            <td>date</td>
-            <td>link</td>
-            <td>manage</td>
-          </tr>
-        </thead>
-        <tbody>{renderData()}</tbody>
-      </table>
+      <div className="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <td>title</td>
+              <td>description</td>
+              <td>image</td>
+              <td>date</td>
+              <td>link</td>
+              <td>manage</td>
+            </tr>
+          </thead>
+          <tbody>{renderData()}</tbody>
+        </table>
+      </div>
     </Dashboard>
   );
 }

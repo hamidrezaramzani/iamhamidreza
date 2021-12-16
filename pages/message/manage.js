@@ -8,18 +8,20 @@ function Manage() {
   const renderData = useRenderData(MessageItem, loading, state);
   return (
     <Dashboard title="Manage Messages">
-      <table>
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Date and Time</th>
-            <th>Mange</th>
-          </tr>
-        </thead>
+      <div className="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Date and Time</th>
+              <th>Mange</th>
+            </tr>
+          </thead>
 
-        <tbody>{renderData()}</tbody>
-      </table>
+          <tbody>{renderData()}</tbody>
+        </table>
+      </div>
     </Dashboard>
   );
 }

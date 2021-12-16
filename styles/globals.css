@@ -114,3 +114,8 @@ table thead tr {
   background-color: goldenrod;
   color: #fff;
 }
+
+.responsive-table{
+  width: 100%;
+  overflow-x: auto;
+}

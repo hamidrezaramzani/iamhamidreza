@@ -19,3 +19,15 @@
   font: 21px Quicksand;
   color: goldenrod;
 }
+
+
+@media only screen and (max-width: 600px){
+  .dashboard{
+    width: 100%;
+    flex-direction: column;
+  }  
+
+  .content{
+    width: 100%;
+  }
+}
