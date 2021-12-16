@@ -3,10 +3,10 @@ import Navbar from "./Navbar";
 import ScrollDownLink from "./ScrollDownLink";
 import { header } from "./styles.module.css";
 import Welcome from "./Welcome";
-function Header() {
+function Header({user}) {
   return (
     <header className={header}>
-      <Navbar />
+      <Navbar user={user} />
       <Welcome />
       <ScrollDownLink />
     </header>

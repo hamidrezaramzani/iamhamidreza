@@ -6,7 +6,8 @@ import Projects from "../components/Projects";
 import Blog from "../components/Blog";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
-export default function Home() {
+import withSession from "../lib/session";
+export default function Home({user}) {
   return (
     <>
       <Head>
@@ -44,7 +45,7 @@ export default function Home() {
         <meta name="theme-color" content="#000" />
       </Head>
 
-      <Header />
+      <Header user={user} />
       <AboutUs />
       <Projects />
       <Skills />
@@ -54,3 +55,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = withSession(async function ({ req }) {
+  const user = req.session.get("user");
+  return {
+    props: {
+      user: user ? true : false,
+    },
+  };
+});

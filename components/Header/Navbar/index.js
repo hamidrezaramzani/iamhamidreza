@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import SocialMedias from "./SocialMedias";
 import { navbar, fixed } from "./styles.module.css";
-function Navbar() {
+function Navbar({user}) {
   const [state, setState] = useState(false);
   const handleScroll = () => {
     if (window.scrollY > 50) setState(true);
@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <div className={`${navbar} ${state ? fixed : ""}`}>
       <Logo />
-      <Nav />
+      <Nav user={user} />
       <SocialMedias />
     </div>
   );
