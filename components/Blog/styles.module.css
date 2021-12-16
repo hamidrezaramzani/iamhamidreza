@@ -57,9 +57,17 @@
   text-align: center;
   color: #fff;
   font: 13px Quicksand;
+  padding: 10px 0;
 }
 
 @media only screen and (max-width: 600px) {
+
+
+  .header{
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
   .blog_item_reverse {
     flex-direction: row !important;
   }

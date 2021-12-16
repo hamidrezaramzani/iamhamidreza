@@ -6,7 +6,7 @@ import {
   blog_item_content,
   blog_item_reverse,
 } from "./styles.module.css";
-function BlogItem({ id, description, reverse, content, date }) {
+function BlogItem({ id, description, reverse, title, date }) {
   return (
     <div className={blog_item}>
       <Link href={`/blog/${id}`}>
@@ -24,7 +24,7 @@ function BlogItem({ id, description, reverse, content, date }) {
             </div>
             <div>
               <span>{moment.unix(date).format("MM MMMM YYYY -  h:m")}</span>
-              <h3>{content}</h3>
+              <h3>{title}</h3>
               <p>{description}</p>
             </div>
           </div>

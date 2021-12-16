@@ -23,11 +23,11 @@ function SingleBlogItem({ id, liked }) {
   return state != null ? (
     <>
       <Head>
-        <title>{state.content}</title>
+        <title>{state.title}</title>
         <meta name="description" content={state.description} />
       </Head>
       <BlogHeader
-        title={state.content}
+        title={state.title}
         description={state.description}
         image={state.image}
       />
