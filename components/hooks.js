@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import EmptyData from "./EmptyData";
 
 import Loading from "./Loading";
 export const useLoadData = (url, callback = null) => {
@@ -30,6 +31,8 @@ export const useRenderData = (Component, loading, data) => {
 
     if (data.length) {
       return data.map((item) => <Component key={item.id} {...item} />);
+    }else{
+      return <EmptyData />
     }
   };
 

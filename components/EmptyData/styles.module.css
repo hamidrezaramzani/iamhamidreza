@@ -1,0 +1,14 @@
+.empty{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.empty h3{
+    color: #242424;
+    font:17px Quicksand;
+    margin: 0;
+}
