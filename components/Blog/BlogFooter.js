@@ -10,7 +10,6 @@ function BlogFooter({ likes, id  , liked}) {
   const handleClickToggleLike = async () => {
     try {
        await axios.get(`/api/blog/like/${id}`)
-       console.log(liked);
       if(state){
         setState(false)
         setCount(count => count - 1)
