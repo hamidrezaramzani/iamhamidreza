@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: column;
 }
-.contact_us p {
+.contact_us span {
     text-align: center;
     font:15px Quicksand;
     color: #888;

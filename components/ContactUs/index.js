@@ -47,7 +47,7 @@ function ContactUs() {
   return (
     <div className={contact_us}>
       <Title titleText={"#ContactUs"} description={"Get in touch with me"} />
-      <p>You can get in touch with me with these ways</p>
+      <span>You can get in touch with me with these ways</span>
       <AnimatedItems data={CONTACT_US} />
       <div className={contact_us_form}>
         <form onSubmit={handleSubmit(handleSubmitForm)}>
