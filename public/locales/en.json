@@ -1,0 +1,27 @@
+{
+    "name" : "Hamidreza Ramzani"   , 
+    "home" : "Home" , 
+    "projects" : "Projects" , 
+    "blogs" : "Blogs" , 
+    "contact" : "Contact Us" , 
+    "skills": "skills",
+    "about" : "About Me"   , 
+    "about_title" : "#AboutMe" ,
+    "about_text" : "My Name is Hamidreza Ramezani , I'm React Developer based in IRAN and this is a selection of my personal and professional work"  , 
+    "personality" : "Personality Type" , 
+    "uni" : "College" , 
+    "birthday" : "Birthday"  , 
+    "project_description" : "All projects made by me",
+    "skills_description" : "Here are the skills I have" , 
+    "skills_description2" : "There is so much to learn in computer science. As a React Developer, I know these basic skills and always try to learn more about them." , 
+    "blog_description" : "Read more about me" ,
+    "contact_description" : "Get in touch with me" ,
+    "contact_description2" : "You can get in touch with me with these ways"  ,
+    "email_placeholder" : "Type your email" , 
+    "text_placeholder" : "Type your text"  , 
+    "contact_button" : "GET IN TOUCH",
+    "email": "Email",
+  "address": "Address",
+  "phonenumber": "PhoneNumber"
+
+}

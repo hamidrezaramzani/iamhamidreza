@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
-
+@font-face {
+  font-family: "iranyekan";
+  src: url("../public/fonts/iranyekan.ttf") format("truetype");
+}
 html,
 body {
   padding: 0;
@@ -77,7 +80,7 @@ table thead tr {
   color: #111;
 }
 
-.btn{
+.btn {
   cursor: pointer;
   background: transparent;
   border: none;
@@ -104,7 +107,6 @@ table thead tr {
   color: #fff;
 }
 
-
 .btn-warning {
   color: goldenrod;
   border: 1px solid goldenrod;
@@ -115,7 +117,7 @@ table thead tr {
   color: #fff;
 }
 
-.responsive-table{
+.responsive-table {
   width: 100%;
   overflow-x: auto;
 }

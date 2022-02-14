@@ -8,7 +8,9 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import AnimatedItems from "../AnimatedItems";
 import { CONTACT_US } from "../../constants";
+import { useTranslation } from "../hooks";
 function ContactUs() {
+  const t = useTranslation();
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -46,8 +48,8 @@ function ContactUs() {
 
   return (
     <div className={contact_us}>
-      <Title titleText={"#ContactUs"} description={"Get in touch with me"} />
-      <span>You can get in touch with me with these ways</span>
+      <Title titleText={`#${t("contact")}`} description={t("contact_description")} />
+      <span>{t("contact_description2")}</span>
       <AnimatedItems data={CONTACT_US} />
       <div className={contact_us_form}>
         <form onSubmit={handleSubmit(handleSubmitForm)}>
@@ -55,17 +57,17 @@ function ContactUs() {
             {...register("email")}
             type="text"
             name="email"
-            placeholder="Type your email"
+            placeholder={t("email_placeholder")}
           />
 
           <span className="error-label">{errors.email?.message}</span>
           <textarea
             {...register("message")}
-            placeholder="Type your text"
+            placeholder={t("text_placeholder")}
             name="message"
           ></textarea>
           <span className="error-label">{errors.message?.message}</span>
-          <button>GET IN TOUCH</button>
+          <button>{t("contact_button")}</button>
         </form>
       </div>
     </div>

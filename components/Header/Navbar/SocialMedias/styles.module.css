@@ -1,19 +1,33 @@
-
 .social_medias {
   display: flex;
   justify-content: center;
-    padding: 0 10px;
-  }
-  .social_medias a {
-    cursor: pointer;
-  }
-  .social_medias svg {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  
-  .social_medias svg:hover{
-    color: goldenrod;
-  }
-  
+  padding: 10px 20px !important;
+}
+.social_medias a {
+  cursor: pointer;
+}
+.social_medias svg {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.social_medias svg:hover {
+  color: goldenrod;
+}
+
+.change_language_select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  cursor: pointer;
+}
+
+.change_language_select::-ms-expand {
+  display: none;
+}

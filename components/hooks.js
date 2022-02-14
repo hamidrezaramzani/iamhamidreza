@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { LanguagesContext } from "../context/providers/LanguagesProvider";
 import EmptyData from "./EmptyData";
 
 import Loading from "./Loading";
@@ -31,10 +32,15 @@ export const useRenderData = (Component, loading, data) => {
 
     if (data.length) {
       return data.map((item) => <Component key={item.id} {...item} />);
-    }else{
-      return <EmptyData />
+    } else {
+      return <EmptyData />;
     }
   };
 
   return renderData;
+};
+
+export const useTranslation = () => {
+  const { t } = useContext(LanguagesContext);  
+  return t;
 };

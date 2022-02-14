@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "../hooks";
 import { animated_item } from "./styles.module.css";
-function AnimatedItems({ title, description, staticImage, animate }) {
+function AnimatedItems({ name, description, staticImage, animate }) {
   const [state, setState] = useState(staticImage);
+  const t = useTranslation();
   const handleMouseEnter = () => {
     setState(animate);
   };
@@ -15,8 +17,8 @@ function AnimatedItems({ title, description, staticImage, animate }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={`/images/${state}`} alt={title} width={105} />
-      <h3>{title}</h3>
+      <img src={`/images/${state}`} alt={description} width={105} />
+      <h3>{t(name)}</h3>
       <p>{description}</p>
     </div>
   );

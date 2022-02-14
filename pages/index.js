@@ -7,9 +7,12 @@ import Blog from "../components/Blog";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import withSession from "../lib/session";
-export default function Home({user}) {
+import { LanguagesContext } from "../context/providers/LanguagesProvider";
+import { useContext } from "react";
+export default function Home({ user }) {
+  const { state } = useContext(LanguagesContext);
   return (
-    <>
+    <div style={{ fontFamily: state.language == "fa" ? "iranyekan" : "Quicksand" }}>
       <Head>
         <title>Hamidreza Ramzani</title>
         <meta
@@ -52,7 +55,7 @@ export default function Home({user}) {
       <Blog />
       <ContactUs />
       <Footer />
-    </>
+    </div>
   );
 }
 

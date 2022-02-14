@@ -1,21 +1,22 @@
 export const ABOUT_ME = [
   {
-    title: "Personality type",
     description: "INTP",
     staticImage: "user-static.png",
     animate: "user.gif",
+    name : "personality"
   },
   {
-    title: "Education",
     description: "Shamsipour Technical and Vocational College",
     staticImage: "education-static.png",
     animate: "education.gif",
+    name : "uni"
   },
   {
     title: "Date of birth",
     description: "2002 Januray 25 , Friday",
     staticImage: "birthday-static.png",
     animate: "birthday.gif",
+    name :"birthday"
   },
 ];
 
@@ -42,17 +43,20 @@ export const CONTACT_US = [
     description: "hamidrezaramzani7@gmail.com",
     staticImage: "email-static.png",
     animate: "email.gif",
+    name : "email"
   },
   {
     title: "Address",
     description: "Mazandaran - Ramsar",
     staticImage: "address-static.png",
     animate: "address.gif",
+    name : "address"
   },
   {
     title: "Phonenumber",
     description: "09385989380",
     staticImage: "call-static.png",
     animate: "call.gif",
+    name : "phonenumber"
   },
 ];

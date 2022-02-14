@@ -10,7 +10,7 @@
   left: 0;
 }
 
-.navbar div {
+.navbar > div {
   padding: 10px 0;
 }
 
