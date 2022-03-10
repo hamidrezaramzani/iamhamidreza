@@ -5,10 +5,11 @@ import fa from "../../public/locales/fa.json";
 import en from "../../public/locales/en.json";
 export const LanguagesContext = React.createContext();
 const LanguagesProvider = ({ children }) => {
+  const SUPPORT_LANGUAGE = ["en", "fa"];
   useEffect(() => {
     const defaultLanguageStorage = localStorage.getItem("default_hamidreza_ln");
     let defaultLanguage = "en";
-    if (defaultLanguageStorage)
+    if (defaultLanguageStorage && SUPPORT_LANGUAGE.includes(defaultLanguageStorage))
       defaultLanguage = defaultLanguageStorage;
     dispatch(changeLanguage(defaultLanguage));
   }, []);
