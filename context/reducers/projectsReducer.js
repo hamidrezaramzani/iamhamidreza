@@ -4,7 +4,7 @@ const reducer = (state, action) => {
     case FETCH_DATA:
       return action.data;
     case REMOVE_ITEM: {
-      return state.filter((item) => item.id != action.id);
+      return state.filter((item) => item._id != action.id);
     }
     default:
       return state;

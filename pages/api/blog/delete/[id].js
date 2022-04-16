@@ -1,9 +1,12 @@
-const db = require("../../../../lib/database");
-export default function handler(req, res) {
-  const { id } = req.query;
-  db.query("DELETE FROM blogs WHERE id=?", [id], (err) => {
-    if (err) res.status(400).json(err);
+require("../../../../lib/mongodb");
+const Blog = require(".././../../../models/Blog");
+export default async function handler(req, res) {
+  try {
+    const { id } = req.query;
+    await Blog.findByIdAndDelete(id);
+    return res.status(200).json({ message: "blog deleted" })
+  } catch (error) {
+    return res.status(500).json(error);
+  }
 
-    res.status(200).json({ message: "blog deleted" });
-  });
 }

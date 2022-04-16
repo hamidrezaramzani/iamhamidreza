@@ -1,19 +1,17 @@
-const db = require("../../../lib/database");
-import withSession from "../../../lib/session";
+require("../../../lib/mongodb");
+const Blog = require("../../../models/Blog");
 const moment = require("moment");
+import withSession from "../../../lib/session";
 
 export default withSession(async (req, res) => {
-  const data = req.body;
-  data.time = moment().unix();
-  db.query(
-    "INSERT INTO `blogs`(`title`,`description`, `image`,  `content`,  `date`) VALUES (?,?,?,?,?)",
-    Object.values(data),
-    (err, result) => {
-      if (err) res.status(500).json(err);
+  try {
+    const data = req.body;
+    data.date = moment().unix();
 
-      res.status(200).json({
-        message: "blog added",
-      });
-    }
-  );
+    await Blog.create(data);
+    return res.status(200).json({ message: "blog created" })
+  } catch (error) {
+    return res.status(200).json(error);
+  }
+
 });

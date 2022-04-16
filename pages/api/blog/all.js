@@ -1,9 +1,11 @@
-const db = require("../../../lib/database");
-export default function handle(req, res) {
-  db.query("SELECT * FROM blogs", (err, result) => {
-    if (err) res.status(400).json(err);
+require("../../../lib/mongodb");
+const Blog = require("../../../models/Blog");
 
-    const data = JSON.parse(JSON.stringify(result));
-    res.status(200).json(data);
-  });
+export default async function handle(req, res) {
+  try {
+    const blogs = await Blog.find({});
+    return res.status(200).json(blogs);
+  } catch (error) {
+    return res.status(200).json(error);
+  }
 }

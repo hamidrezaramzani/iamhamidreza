@@ -31,7 +31,7 @@ export const useRenderData = (Component, loading, data) => {
     if (loading) return <Loading />;
 
     if (data.length) {
-      return data.map((item) => <Component key={item.id} {...item} />);
+      return data.map((item) => <Component key={item._id} {...item} />);
     } else {
       return <EmptyData />;
     }

@@ -1,13 +1,12 @@
-const db = require("../../../lib/database");
-export default function handler(req, res) {
-  const { id } = req.query;
-  db.query(
-    "SELECT * FROM blogs WHERE id=? AND status=1",
-    [id],
-    (err, result) => {
-      if (err) res.status(400).json(err);
+require("../../../lib/mongodb");
+const Blog = require(".././../../models/Blog");
+export default async function handler(req, res) {
+  try {
+    const { id } = req.query;
+    const blog = await Blog.findById(id);
+    return res.status(200).json(blog);
+  } catch (error) {
+    return res.status(500).json(error);
+  }
 
-      res.status(200).json(result[0]);
-    }
-  );
 }

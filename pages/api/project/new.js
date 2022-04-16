@@ -1,18 +1,13 @@
-import withSession from "../../../lib/session";
-const db = require("../../../lib/database");
+require("../../../lib/mongodb");
+const Project = require("../../../models/Project");
 const moment = require("moment");
+import withSession from "../../../lib/session";
 export default withSession(async (req, res) => {
   const data = req.body;
   data.date = moment().unix();
-  db.query(
-    "INSERT INTO `projects`(`title`,`description`, `image`, `link`,`date`) VALUES (?,?,?,?,?)",
-    Object.values(data),
-    (err) => {
-      if (err) res.status(500).json(err);
+  await Project.create(data);
 
-      res.status(200).json({
-        message: "project added",
-      });
-    }
-  );
+  return res.status(200).json({
+    message: "project added"
+  })
 });

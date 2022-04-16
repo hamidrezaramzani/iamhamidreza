@@ -5,12 +5,12 @@ import axios from "axios";
 import { ProjectsContext } from "../../context/providers/ProjectsPorvider";
 import { removeItem } from "../../context/actions/projectsActions";
 
-function ManageProjectItem({ id, title, description, date, image, link }) {
+function ManageProjectItem({ _id, title, description, date, image, link }) {
   const { dispatch } = useContext(ProjectsContext);
   const handleClickDeleteProject = async () => {
     try {
-      await axios.post(`/api/project/delete/${id}`);
-      dispatch(removeItem(id))
+      await axios.post(`/api/project/delete/${_id}`);
+      dispatch(removeItem(_id))
     } catch (error) {
       Swal.fire({
         title: "Error",

@@ -1,29 +1,15 @@
-const db = require("../../../lib/database");
-const bcrypt = require("bcrypt");
+require("../../../lib/mongodb");
+const User = require("../../../models/User");
 import withSession from "../../../lib/session";
 export default withSession(async (req, res) => {
-  const { username, password } = req.body;  
-  db.query(
-    "SELECT * FROM admin WHERE username=?",
-    [username],
-    async (err, result) => {
-      if (err) res.status(500).json(err);
+  const { username, password } = req.body;
+  const user = await User.findOne({ username, password });
 
-      if (result.length) {
-        const isCorrectPassword = bcrypt.compareSync(
-          password,
-          result[0].password
-        );
-        if (isCorrectPassword) {
-          req.session.set("user", result[0]);
-          await req.session.save();
-          res.status(200).json({
-            message: "welcome admin",
-          });
-        }
-      } else {
-        res.status(401).json({ message: "username or password is invalid" });
-      }
-    }
-  );
+  if (user) {
+    req.session.set("user", user);
+    await req.session.save();
+    return res.status(200).json({ message: "user logged" });
+
+  }
+  return res.json(401).json({ message: "username or password is invalid" });
 });
