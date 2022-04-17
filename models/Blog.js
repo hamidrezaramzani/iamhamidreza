@@ -22,6 +22,10 @@ const BlogsSchema = new Schema({
     date: {
         type: Number,
         required: true,
+    },
+    link: {
+        type: String,
+        default: (Math.random() + 1).toString(36)
     }
 });
 

@@ -4,7 +4,7 @@ function BlogHeader({ title, description, image }) {
   return (
     <div className={header}>
       <div className={blog_info}>
-        <h1>{title}</h1>
+        <h1>{title}  <span>{}</span></h1>
         <p>{description}</p>
       </div>
       <div className={blog_image}>

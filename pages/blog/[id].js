@@ -31,8 +31,7 @@ function SingleBlogItem({ id, liked }) {
         description={state.description}
         image={state.image}
       />
-      <BlogContent content={state.content} />
-      <BlogFooter id={state.id} likes={state.likes} liked={liked} />
+      <BlogContent content={state.content} />      
     </>
   ) : (
     <Loading />

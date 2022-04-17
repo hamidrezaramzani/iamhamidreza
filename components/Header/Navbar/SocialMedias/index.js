@@ -15,14 +15,14 @@ function SocialMedias() {
   };
   return (
     <div className={social_medias}>
-      <Item link={"https://twitter.com/hamidrezaramzani_80"}>
+      <Item link={"https://twitter.com/iamhamidreza_"}>
         <FiTwitter />
       </Item>
       <Item link={"https://github.com/hamidrezaramzani"}>
         <FaGithub />
       </Item>
 
-      <Item link={"https://t.me/manticore_channel"}>
+      <Item link={"https://t.me/hamidrezaramzani"}>
         <FaTelegram />
       </Item>
       <Item link={"https://instagram.com/hamidrezaramzani_"}>
