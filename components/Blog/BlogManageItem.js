@@ -7,7 +7,7 @@ import axios from "axios";
 import { BlogsContext } from "../../context/providers/BlogsProvider";
 import { changeStatus, removeItem } from "../../context/actions/blogActions";
 function BlogManageItem({
-  id,
+  _id,
   title,
   content,
   description,
@@ -47,8 +47,8 @@ function BlogManageItem({
 
   const handleClickDeleteBlog = async () => {
     try {
-      await axios.get(`/api/blog/delete/${id}`);
-      dispatch(removeItem(id));
+      await axios.get(`/api/blog/delete/${_id}`);
+      dispatch(removeItem(_id));
     } catch (error) {
       console.log(error);
       Swal.fire({
@@ -66,9 +66,9 @@ function BlogManageItem({
   const handleClickChangeStatus = async () => {
     try {
       const { data } = await axios.get(
-        `/api/blog/change-status/${id}/${status}`
+        `/api/blog/change-status/${_id}/${status}`
       );
-      dispatch(changeStatus(id, data.status));
+      dispatch(changeStatus(_id, data.status));
     } catch (error) {
       Swal.fire({
         title: "Error",
@@ -96,7 +96,7 @@ function BlogManageItem({
         <img src={image} alt={title} />
         <button onClick={handleClickCloseImageModal}>Close</button>
       </Modal>
-      <tr key={id}>
+      <tr key={_id}>
         <td>{title}</td>
         <td>{description}</td>
         <td>

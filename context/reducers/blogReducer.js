@@ -4,11 +4,11 @@ const reducer = (state, action) => {
     case LOAD_DATA:
       return action.data;
     case REMOVE_ITEM: {
-      return state.filter((item) => item.id != action.id);
+      return state.filter((item) => item._id != action.id);
     }
     case CHANGE_STATUS:
       return state.map((item) => {
-        if (item.id == action.id) {
+        if (item._id == action.id) {
           item.status = action.status;
         }
 

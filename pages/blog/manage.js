@@ -8,6 +8,7 @@ import { BlogsContext } from "../../context/providers/BlogsProvider";
 
 function Manage() {
   const { loading } = useLoadData("/api/blog/all", (data) => {
+    console.log(data);
     dispatch(loadData(data));
   });
   const { state, dispatch } = useContext(BlogsContext);
