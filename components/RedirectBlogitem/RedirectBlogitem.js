@@ -4,7 +4,7 @@ const RedirectBlogitem = () => {
     return (
         <div className={styles.loading}>
             <div className={styles.loading_svg}></div>
-            <h1>Wait for redirect</h1>
+            <h1>Wait for redirecting ... </h1>
         </div>
     )
 }
