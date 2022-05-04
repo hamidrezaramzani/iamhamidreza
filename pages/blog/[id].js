@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogContent from "../../components/Blog/BlogContent";
-import BlogFooter from "../../components/Blog/BlogFooter";
 import axios from "axios";
 import Loading from "../../components/Loading";
 import withSession from "../../lib/session";
 import Head from "next/head";
-function SingleBlogItem({ id, liked }) {
+function SingleBlogItem({ id , domain }) {
   const [state, setState] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +29,8 @@ function SingleBlogItem({ id, liked }) {
         title={state.title}
         description={state.description}
         image={state.image}
+        link={state.link}
+        domain={domain}
       />
       <BlogContent content={state.content} />      
     </>
@@ -40,11 +41,11 @@ function SingleBlogItem({ id, liked }) {
 
 export const getServerSideProps = withSession(({ query, req }) => {
   const { id } = query;
-  const liked = req.session.get(`blog-like-${id}`) ? true : false;  
+  const domain = req.headers.host;
   return {
     props: {
       id,
-      liked,
+      domain,
     },
   };
 });

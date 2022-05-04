@@ -136,6 +136,9 @@
   display: flex;
   justify-content: center;
 }
+.blog_image img{
+  border-radius: 15px;
+}
 
 .blog_info{
   width: 70%;
@@ -149,6 +152,23 @@
 .blog_info p{
   color: #888;
   font:18px Quicksand
+}
+.blog_info button{
+  padding: 5px 10px;
+  border:1px solid goldenrod;
+  color: goldenrod;
+  background: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   gap: 15px;
+}
+
+.blog_info button:hover{
+  background: goldenrod;
+  color: #111;
 }
 
 .blog_content{
