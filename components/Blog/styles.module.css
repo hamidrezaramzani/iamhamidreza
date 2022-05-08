@@ -61,12 +61,15 @@
 }
 
 @media only screen and (max-width: 600px) {
-
-
-  .header{
+  .blog_comments_items {
+    width: 80% !important;
+  }
+  .blog_comment_form {
+    width: 80% !important;
+  }
+  .header {
     flex-direction: column-reverse;
     align-items: center;
-
   }
   .blog_item_reverse {
     flex-direction: row !important;
@@ -88,8 +91,6 @@
     width: 100% !important;
   }
 }
-
-
 
 .blog_data {
   width: 100%;
@@ -119,43 +120,117 @@
   display: block;
   text-align: center;
   color: red;
-  font:16px Quicksand
+  font: 16px Quicksand;
 }
 
-.header{
+.header {
   width: 100%;
   height: auto;
   padding: 50px;
-  background: #131313;
   display: flex;
 }
 
-
-.blog_image{
+.blog_image {
   width: 30%;
   display: flex;
   justify-content: center;
 }
-.blog_image img{
+.blog_image img {
   border-radius: 15px;
 }
 
-.blog_info{
-  width: 70%;
+.blog_text {
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+  color: #999;
 }
 
-.blog_info h1{
+.blog_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog_comments {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.blog_comment_form h3,
+.blog_comments_items h3 {
+  text-align: left;
+  font: 20px Quicksand;
+  color: #999;
+}
+.blog_comments_items {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.blog_comments_item {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+.blog_comments_item h4 {
+  color: #686868;
+  margin: 0;
+  font-family: Quicksand;
+}
+
+.blog_comments_item h4 span {
+  color: #aa1135;
+}
+
+.blog_comments_item p {
+  color: #ccc;
+  padding-top: 10px;
+  margin: 0;
+  font-family: Quicksand;
+}
+
+.blog_comments_item div {
+  padding: 0 10px;
+}
+.blog_comments_item img {
+  border-radius: 100%;
+}
+
+.blog_comment_form {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.blog_comment_form textarea {
+  height: 200px;
+}
+
+.blog_info span {
+  margin: 0;
+  padding: 0;
+  color: #555;
+  font:14px Quicksand;
+  color: #aa1135;
+  margin-top: 30px;
+}
+.blog_info h1 {
   color: goldenrod;
-  font:40px Quicksand
+  font: 40px Quicksand;
+  margin: 0;
 }
 
-.blog_info p{
+.blog_info p {
   color: #888;
-  font:18px Quicksand
+  font: 14px Quicksand;
 }
-.blog_info button{
+.blog_info button {
   padding: 5px 10px;
-  border:1px solid goldenrod;
+  border: 1px solid goldenrod;
   color: goldenrod;
   background: transparent;
   border-radius: 2px;
@@ -163,41 +238,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-   gap: 15px;
+  gap: 15px;
 }
 
-.blog_info button:hover{
+.blog_info button:hover {
   background: goldenrod;
   color: #111;
 }
 
-.blog_content{
+.blog_content {
   width: 100%;
-  padding: 50px;
-  color: #fff;
+  height: 400px;
+  position: relative;
+  margin-bottom: 30px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1040%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1041)'%3e%3c/rect%3e%3cpath d='M655.985%2c516.465C711.348%2c517.69%2c764.886%2c489.134%2c790.976%2c440.288C815.806%2c393.8%2c802.993%2c338.293%2c775.004%2c293.635C748.928%2c252.029%2c705.059%2c226.576%2c655.985%2c224.904C603.563%2c223.118%2c548.908%2c239.97%2c522.041%2c285.018C494.631%2c330.977%2c504.155%2c388.22%2c530.959%2c434.535C557.709%2c480.757%2c602.594%2c515.284%2c655.985%2c516.465' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1355.145%2c479.176C1410.54%2c477.2%2c1453.77%2c433.792%2c1477.401%2c383.652C1497.733%2c340.511%2c1488.339%2c291.184%2c1462.698%2c250.971C1439.13%2c214.009%2c1398.955%2c193.435%2c1355.145%2c191.916C1308.145%2c190.286%2c1260.506%2c204.294%2c1233.844%2c243.034C1203.284%2c287.438%2c1192.158%2c344.999%2c1216.788%2c392.947C1243.401%2c444.755%2c1296.938%2c481.252%2c1355.145%2c479.176' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M897.153%2c124.093C929.856%2c121.931%2c955.986%2c100.265%2c972.723%2c72.087C989.905%2c43.16%2c1000.21%2c7.806%2c983.603%2c-21.455C966.834%2c-51%2c931.061%2c-63.15%2c897.153%2c-61.06C866.703%2c-59.183%2c844.162%2c-37.304%2c827.383%2c-11.825C808.026%2c17.569%2c785.964%2c52.061%2c802.037%2c83.372C818.918%2c116.257%2c860.269%2c126.532%2c897.153%2c124.093' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1000.208%2c449.934C1043.33%2c447.29%2c1083.814%2c429.6%2c1106.957%2c393.118C1131.955%2c353.712%2c1140.14%2c304.52%2c1118.772%2c263.034C1095.63%2c218.104%2c1050.713%2c183.993%2c1000.208%2c185.866C952.087%2c187.65%2c920.59%2c229.921%2c895.956%2c271.297C870.5%2c314.053%2c843.014%2c364.786%2c868.095%2c407.763C893.068%2c450.555%2c950.755%2c452.966%2c1000.208%2c449.934' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M130.042%2c362.736C173.824%2c361.412%2c205.345%2c326.208%2c227.604%2c288.484C250.351%2c249.933%2c268.821%2c203.714%2c246.899%2c164.688C224.667%2c125.111%2c175.419%2c113.569%2c130.042%2c114.803C87.126%2c115.97%2c45.844%2c133.979%2c23.695%2c170.757C0.846%2c208.698%2c0.234%2c255.967%2c21.696%2c294.71C43.843%2c334.691%2c84.358%2c364.117%2c130.042%2c362.736' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M627.451%2c367.536C655.345%2c369.009%2c686.511%2c366.576%2c701.739%2c343.159C717.99%2c318.169%2c713.93%2c284.697%2c697.489%2c259.832C682.55%2c237.238%2c654.518%2c229.783%2c627.451%2c230.809C602.39%2c231.759%2c578.751%2c243.193%2c566.039%2c264.812C553.153%2c286.727%2c552.57%2c314.149%2c565.615%2c335.97C578.343%2c357.26%2c602.682%2c366.228%2c627.451%2c367.536' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1119.605%2c675.76C1173.863%2c678.968%2c1231.386%2c656.646%2c1255.88%2c608.125C1278.825%2c562.674%2c1251.791%2c511.823%2c1223.849%2c469.261C1199.369%2c431.972%2c1164.201%2c401.479%2c1119.605%2c400.546C1073.469%2c399.581%2c1030.523%2c424.73%2c1007.52%2c464.734C984.587%2c504.618%2c987.07%2c552.875%2c1008.651%2c593.506C1031.798%2c637.085%2c1070.346%2c672.847%2c1119.605%2c675.76' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1321.093%2c507.039C1360.966%2c508.949%2c1404.392%2c504.262%2c1426.973%2c471.343C1452.172%2c434.608%2c1453.522%2c385.193%2c1431.063%2c346.722C1408.773%2c308.541%2c1365.297%2c289.201%2c1321.093%2c289.976C1278.274%2c290.726%2c1237.397%2c312.486%2c1217.602%2c350.463C1199.046%2c386.062%2c1209.305%2c428.483%2c1231.441%2c461.974C1251.208%2c491.881%2c1285.285%2c505.323%2c1321.093%2c507.039' fill='rgba(83%2c 30%2c 164%2c 1)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1040'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1041'%3e%3cstop stop-color='rgba(107%2c 33%2c 168%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(76%2c 29%2c 149%2c 1)' offset='0.44'%3e%3c/stop%3e%3cstop stop-color='rgba(88%2c 28%2c 135%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
 }
-
-.blog_footer{
-  width: 100%;
-  height: auto;
-  background: #151515;
+.blog_content .blog_box {
   position: absolute;
-  bottom: 0;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  background: #121212;
+  top: 200px;
+  right: 0;
+  height: auto;
+  left: 0;
+  margin: auto;
+  border-radius: 20px;
 }
 
-.blog_like_button{
-  cursor: pointer;
-  border-radius: 5px;
-  border:1px solid #aa1135;
-  color: #aa1135;
-  background:transparent;
-  font:15px Quicksand;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-}

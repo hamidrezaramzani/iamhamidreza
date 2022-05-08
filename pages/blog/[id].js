@@ -5,7 +5,8 @@ import axios from "axios";
 import Loading from "../../components/Loading";
 import withSession from "../../lib/session";
 import Head from "next/head";
-function SingleBlogItem({ id , domain }) {
+import Navbar from "../../components/Header/Navbar";
+function SingleBlogItem({ id, domain }) {
   const [state, setState] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -25,14 +26,14 @@ function SingleBlogItem({ id , domain }) {
         <title>{state.title}</title>
         <meta name="description" content={state.description} />
       </Head>
-      <BlogHeader
-        title={state.title}
+      <Navbar />
+      <BlogContent content={state.content} title={state.title}
         description={state.description}
         image={state.image}
         link={state.link}
-        domain={domain}
-      />
-      <BlogContent content={state.content} />      
+        date={state.date}
+        comments={state.comments}
+        domain={domain} id={id} />
     </>
   ) : (
     <Loading />

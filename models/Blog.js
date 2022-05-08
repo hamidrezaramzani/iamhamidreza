@@ -26,7 +26,13 @@ const BlogsSchema = new Schema({
     link: {
         type: String,
         default: (Math.random() + 1).toString(36)
-    }
+    },
+    comments: [{
+        fullname: String,
+        email: String,
+        text: String,
+        date: Number,
+    }]
 });
 
 

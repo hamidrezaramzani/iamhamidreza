@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 @font-face {
-  font-family: "iranyekan";
-  src: url("../public/fonts/iranyekan.ttf") format("truetype");
+  font-family: 'iranyekan';
+  src: url('../public/fonts/iranyekan.ttf') format('truetype');
 }
-html,
-body {
-  padding: 0;
-  margin: 0;
+html {
   background: #000;
-  overflow-x: hidden !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 ul {

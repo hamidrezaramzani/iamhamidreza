@@ -8,6 +8,7 @@ export default withSession(async (req, res) => {
     const data = req.body;
     data.date = moment().unix();
 
+    data.comments = [];
     await Blog.create(data);
     return res.status(200).json({ message: "blog created" })
   } catch (error) {
