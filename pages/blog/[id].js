@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogContent from "../../components/Blog/BlogContent";
 import axios from "axios";
 import Loading from "../../components/Loading";
 import withSession from "../../lib/session";
 import Head from "next/head";
 import Navbar from "../../components/Header/Navbar";
-function SingleBlogItem({ id, domain }) {
+function SingleBlogItem({ id, domain , user }) {
   const [state, setState] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +25,7 @@ function SingleBlogItem({ id, domain }) {
         <title>{state.title}</title>
         <meta name="description" content={state.description} />
       </Head>
-      <Navbar />
+      <Navbar user={user} />
       <BlogContent content={state.content} title={state.title}
         description={state.description}
         image={state.image}
@@ -41,12 +40,14 @@ function SingleBlogItem({ id, domain }) {
 }
 
 export const getServerSideProps = withSession(({ query, req }) => {
+  const user = req.session.get("user");
   const { id } = query;
   const domain = req.headers.host;
   return {
     props: {
       id,
       domain,
+      user
     },
   };
 });

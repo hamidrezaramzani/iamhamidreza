@@ -15,7 +15,7 @@ function Nav({ user }) {
         <AiOutlineMenu />
       </button>
       <ul className={state ? show : ""}>
-        <NavItem title={t("home")} link="#home" />
+        <NavItem title={t("home")} link="/" />
         <NavItem title={t("projects")} link="#projects" />
         <NavItem title={t("blogs")} link="#blogs" />
         <NavItem title={t("contact")} link="#contact_us" />
