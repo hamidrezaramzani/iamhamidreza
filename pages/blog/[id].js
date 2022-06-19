@@ -26,9 +26,9 @@ function SingleBlogItem({ data, domain, user, id }) {
 export const getServerSideProps = withSession(async ({ query, req }) => {
   const user = req.session.get("user");
   const { id } = query;
-  const { data } = await axios.get(`http://localhost:3000/api/blog/${id}`);
-  console.log(data);
   const domain = req.headers.host;
+  const { data } = await axios.get(`${domain}/api/blog/${id}`);
+  console.log(`${domain}/api/blog/${id}`);
   return {
     props: {
       data,
