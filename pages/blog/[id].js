@@ -5,33 +5,17 @@ import Loading from "../../components/Loading";
 import withSession from "../../lib/session";
 import Head from "next/head";
 import Navbar from "../../components/Header/Navbar";
-function SingleBlogItem({ id, domain , user }) {
-  const [state, setState] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(`/api/blog/${id}`);
-        setState(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+function SingleBlogItem({ data, domain, user, id }) {
 
-    fetchData();
-  }, []);
-  return state != null ? (
+
+  return data ? (
     <>
       <Head>
-        <title>{state.title}</title>
-        <meta name="description" content={state.description} />
+        <title>{data.title}</title>
+        <meta name="description" content={data.description} />
       </Head>
       <Navbar user={user} />
-      <BlogContent content={state.content} title={state.title}
-        description={state.description}
-        image={state.image}
-        link={state.link}
-        date={state.date}
-        comments={state.comments}
+      <BlogContent {...data}
         domain={domain} id={id} />
     </>
   ) : (
@@ -39,15 +23,18 @@ function SingleBlogItem({ id, domain , user }) {
   );
 }
 
-export const getServerSideProps = withSession(({ query, req }) => {
+export const getServerSideProps = withSession(async ({ query, req }) => {
   const user = req.session.get("user");
   const { id } = query;
+  const { data } = await axios.get(`http://localhost:3000/api/blog/${id}`);
+  console.log(data);
   const domain = req.headers.host;
   return {
     props: {
-      id,
+      data,
       domain,
-      user
+      user: user ? user : null,
+      id
     },
   };
 });
