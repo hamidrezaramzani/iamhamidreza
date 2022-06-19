@@ -27,8 +27,7 @@ export const getServerSideProps = withSession(async ({ query, req }) => {
   const user = req.session.get("user");
   const { id } = query;
   const domain = req.headers.host;
-  const { data } = await axios.get(`${domain}/api/blog/${id}`);
-  console.log(`${domain}/api/blog/${id}`);
+  const { data } = await axios.get(`http://${domain}/api/blog/${id}`);
   return {
     props: {
       data,
