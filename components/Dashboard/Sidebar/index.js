@@ -5,6 +5,8 @@ function Sidebar() {
   return (
     <div className={sidebar}>
       <SidebarItem title="Home" link="/" />
+      <SidebarItem title="New Experience" link="/experience/new" />
+      <SidebarItem title="Manage Experience" link="/blog/new" />
       <SidebarItem title="Create New Blog" link="/blog/new" />
       <SidebarItem title="Manage Blogs" link="/blog/manage" />
       <SidebarItem title="Create New Project" link="/project/new" />

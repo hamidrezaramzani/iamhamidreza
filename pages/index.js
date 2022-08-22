@@ -7,6 +7,7 @@ import Blog from "../components/Blog";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import withSession from "../lib/session";
+import Experience from "../components/Exprience"
 import { LanguagesContext } from "../context/providers/LanguagesProvider";
 import { useContext } from "react";
 export default function Home({ user }) {
@@ -50,6 +51,7 @@ export default function Home({ user }) {
 
       <Header user={user} />
       <AboutUs />
+      <Experience />
       <Projects />
       <Skills />
       <Blog />
