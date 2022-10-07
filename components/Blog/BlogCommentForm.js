@@ -23,6 +23,11 @@ const BlogCommentForm = ({ id }) => {
         try {
             values.id = id;
             await axios.post("/api/comments/new", values);
+            Swal.fire({
+                title: "Success",
+                text: "your comment inserted",
+                icon: "success",
+            });
         } catch (error) {
             console.log(error);
             Swal.fire({

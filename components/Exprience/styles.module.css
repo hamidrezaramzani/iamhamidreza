@@ -14,8 +14,14 @@
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  .item {
+    width: 80%;
+  }
+}
+
 .item::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -20px;
   top: 0;
