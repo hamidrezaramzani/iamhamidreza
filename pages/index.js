@@ -10,6 +10,7 @@ import withSession from "../lib/session";
 import Experience from "../components/Exprience"
 import { LanguagesContext } from "../context/providers/LanguagesProvider";
 import { useContext } from "react";
+import Songs from "../components/Songs";
 export default function Home({ user }) {
   const { state } = useContext(LanguagesContext);
   return (
@@ -55,6 +56,7 @@ export default function Home({ user }) {
       <Projects />
       <Skills />
       <Blog />
+      <Songs />
       <ContactUs />
       <Footer />
     </div>

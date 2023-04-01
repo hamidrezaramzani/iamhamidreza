@@ -11,6 +11,7 @@ function Sidebar() {
       <SidebarItem title="Manage Blogs" link="/blog/manage" />
       <SidebarItem title="Create New Project" link="/project/new" />
       <SidebarItem title="Manage Projects" link="/project/manage" />
+      <SidebarItem title="Create New Song" link="/song/new" />
       <SidebarItem title="Manage Messages" link="/message/manage" />
       <SidebarItem title="Logout" link="/user/logout" />
     </div>

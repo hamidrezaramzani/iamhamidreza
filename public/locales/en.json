@@ -1,7 +1,8 @@
 {
     "name" : "Hamidreza Ramzani"   , 
     "home" : "Home" , 
-    "projects" : "Projects" , 
+    "projects" : "Projects" ,
+    "songs": "Songs", 
     "blogs" : "Blogs" , 
     "contact" : "Contact Us" , 
     "skills": "skills",
@@ -12,6 +13,7 @@
     "uni" : "College" , 
     "birthday" : "Birthday"  , 
     "project_description" : "All projects made by me",
+    "songs_description" : "My best hobby is making different music",
     "skills_description" : "Here are the skills I have" , 
     "skills_description2" : "There is so much to learn in computer science. As a React Developer, I know these basic skills and always try to learn more about them." , 
     "blog_description" : "Read more about me" ,
